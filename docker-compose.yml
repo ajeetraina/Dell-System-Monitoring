@@ -1,0 +1,12 @@
+  nagios:
+    image: appcontainers/nagios:latest 
+    ports: 
+    - "80:80"
+  omsa81:
+    image: jdelaros1/openmanage
+    ports:
+    - "1311:1311"
+    volumes:
+    - {{MODULE_FOLDER}}
+    privileged: true
+    restart: always
