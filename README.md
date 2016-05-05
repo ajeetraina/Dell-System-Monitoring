@@ -1,5 +1,7 @@
 # Building Multi-container for Monitoring Dell System Hardware
 
+This docker-compose file builds up multi-container architecture which monitors the Dell hardware system.
+
 Usage:
 
 ./launch.sh 
