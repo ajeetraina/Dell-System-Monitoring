@@ -3,7 +3,7 @@ nagios:
  ports:
  - 80:80
  net: "host"
- container_name: nagios-newest
+ container_name: nagios
  stdin_open: true
  tty: true
 
