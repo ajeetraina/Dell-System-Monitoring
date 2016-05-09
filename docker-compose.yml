@@ -11,7 +11,7 @@ omsa-core:
  image: jdelaros1/openmanage-snmp
  ports:
  - 1311:1311
- - 161:162/udp
+ - 161:161/udp
  net: "host"
  volumes:
  - {{MODULE_FOLDER}}
