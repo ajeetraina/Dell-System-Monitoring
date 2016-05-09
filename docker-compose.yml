@@ -8,13 +8,13 @@ nagios:
  tty: true
 
 omsa-core:
-	 image: jdelaros1/openmanage-snmp
-	 ports:
-	 - 1311:1311
-	 - 161:161/udp
-	 net: "host"
-	 volumes:
-	 - {{MODULE_FOLDER}}
-	 container_name: omsa-core
-	 privileged: true
-	 restart: always
+ image: jdelaros1/openmanage-snmp
+ ports:
+  - 1311:1311
+  - 161:161/udp
+ net: "host"
+ volumes:
+ - {{MODULE_FOLDER}}
+ container_name: omsa-core
+ privileged: true
+ restart: always
