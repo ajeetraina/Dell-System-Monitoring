@@ -1,5 +1,5 @@
 nagios:
- image: ajeetraina/nagios-docker
+ image: ajeetraina/nagios
  ports:
  - 80:80
  net: "host"
