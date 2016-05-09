@@ -1,25 +1,20 @@
 nagios:
- image: ajeetraina/nagios-docker
+ image: ajeetraina/docker-nagios
  ports:
  - 80:80
  net: "host"
- container_name: nagios-newest
-# links:
-# - omsa-core:omsa-core
+ container_name: ajeetraina/nagios
  stdin_open: true
  tty: true
 
 omsa-core:
- image: kamermans/docker-openmanage
- ports:
- - 1311:1311
- - 161:162/udp
- net: "host"
- volumes:
- - {{MODULE_FOLDER}}
- container_name: omsa-core
- privileged: true
- restart: always
- environment:
- - SNMP_COMMUNITY=public
- - SNMP_TRAP_DEST=localhost
+	 image: jdelaros1/openmanage-snmp
+	 ports:
+	 - 1311:1311
+	 - 161:161/udp
+	 net: "host"
+	 volumes:
+	 - {{MODULE_FOLDER}}
+	 container_name: omsa-core
+	 privileged: true
+	 restart: always
