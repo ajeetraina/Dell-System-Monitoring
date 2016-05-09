@@ -1,17 +1,17 @@
 nagios:
- image: ajeetraina/docker-nagios
+ image: ajeetraina/nagios-docker
  ports:
  - 80:80
  net: "host"
- container_name: ajeetraina/nagios
+ container_name: nagios-newest
  stdin_open: true
  tty: true
 
 omsa-core:
  image: jdelaros1/openmanage-snmp
  ports:
-  - 1311:1311
-  - 161:161/udp
+ - 1311:1311
+ - 161:162/udp
  net: "host"
  volumes:
  - {{MODULE_FOLDER}}
